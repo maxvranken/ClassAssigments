@@ -1,0 +1,25 @@
+body {
+
+}
+ul {
+    padding: 20px;
+    width: 600px;
+    margin: 0 auto 0;
+    text-decoration: none;
+}
+li {
+    margin: 0;
+}
+p {
+    margin: 0;
+    padding: 10px;
+}
+.rood {
+    background-color: rgb(163, 47, 31);
+}
+.oranje {
+    background-color: rgb(232, 145, 30);
+}
+.groen {
+    background-color: rgb(50, 130, 7);
+}
