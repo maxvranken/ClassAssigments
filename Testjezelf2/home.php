@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>testjezelf2</title>
+    <title>Home</title>
     <link rel="stylesheet" href="opmaak.css" media="screen" title="no title" charset="utf-8">
 </head>
 <body>
@@ -10,14 +10,13 @@
 
 <section>
     <article>
-        <h1>Testjezelf2</h1>
+        <h1>Home</h1>
         <p>
-            Homepage
+            Homepage Active
         </p>
     </article>
 </section>
 
-<?php include_once("footer.inc.php");
-?>
+<?php include_once("footer.inc.php");?>
 </body>
 </html>

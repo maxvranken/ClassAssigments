@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>testjezelf2</title>
+    <title>Contact</title>
     <link rel="stylesheet" href="opmaak.css" media="screen" title="no title" charset="utf-8">
 </head>
 <body>
@@ -12,7 +12,7 @@
     <article>
         <h1>Contact form</h1>
         <p>
-           Contact me!
+           Contact Active
         </p>
     </article>
 </section>

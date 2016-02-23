@@ -1,7 +1,9 @@
 body{
-
+  margin: 5em;
+  font-family: Arial;
 }
 
 .active{
-   bakground-color: rgb(89, 255, 0);
+   background-color: rgb(89, 255, 0);
+   width: 50px;
 }

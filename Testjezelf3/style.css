@@ -1,25 +1,37 @@
 body {
-
+ font-family: Arial;
 }
+
+.titel{
+    margin: 0 auto 0;
+    padding: 20px;
+}
+
 ul {
     padding: 20px;
-    width: 600px;
+    width: 500px;
     margin: 0 auto 0;
     text-decoration: none;
 }
 li {
     margin: 0;
+    list-style-type: none;
+}
+
+h1{
+    margin: 0.5em;
 }
 p {
     margin: 0;
     padding: 10px;
+    margin: 0.5em;
 }
 .rood {
-    background-color: rgb(163, 47, 31);
+    background-color: rgb(243, 25, 0);
 }
 .oranje {
-    background-color: rgb(232, 145, 30);
+    background-color: rgb(255, 201, 0);
 }
 .groen {
-    background-color: rgb(50, 130, 7);
+    background-color: rgba(22, 242, 63, 0.52);
 }

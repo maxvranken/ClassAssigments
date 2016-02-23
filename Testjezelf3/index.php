@@ -6,6 +6,7 @@
     <title>Testjezelf3</title>
 </head>
 <body>
+<h1 class="titel">To do list</h1>
 <div class="container">
     <ul>
         <?php include_once("array.php"); ?>
