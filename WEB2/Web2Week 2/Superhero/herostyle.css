@@ -1,0 +1,104 @@
+h1{
+	text-align: center;
+	color: aliceblue;
+}
+
+body{
+	 font-family: Helvetica, sans-serif;
+      background-image: url(http://cdn.desktopwallpapers4.me/wallpapers/movies/1920x1080/2/11048-the-avengers-1920x1080-movie-wallpaper.jpg);
+ background-repeat: no-repeat;
+  
+	
+}
+
+
+
+
+
+.movies{
+	list-style: none;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;;;
+	width: 90%;	
+	margin: auto;
+	padding-left: 0;
+}
+
+.movies li{
+	width: 380px;
+	height: 200px;
+	margin: 8px;
+}
+
+.movies .col2{
+	background-color: rgb(165, 207, 241);
+	flex: 1 45% ; /* 2%  */
+	background-image:url("http://screenrant.com/wp-content/uploads/Chris-Evans-As-Steve-Rodgers-In-Captain-America-Civil-War.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: aliceblue;
+}
+
+#foto1{
+	
+	background-image:url("http://screenrant.com/wp-content/uploads/Iron-Man-Robert-Downey-Jr-Interview.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#foto2{
+	background-image:url("https://media.giphy.com/media/nNOZe5giJhwsM/giphy.gif");
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+}
+
+#foto3{
+	background-image:url("http://www.filmindustrynetwork.biz/wp-content/uploads/2014/12/Kim-Jong-Un-Disney.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+}#foto4{
+	background-image:url("https://media.giphy.com/media/LBXeeU8PPpOWA/giphy.gif");
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+}#foto5{
+	background-image:url("http://screenrant.com/wp-content/uploads/Chris-Hemsworth-Thor-Art-by-PC-Designs.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+}#foto6{
+	background-image:url("http://www.cinemablend.com/images/news_img/71208/hulk_71208.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+}#foto7{
+	background-image:url("http://www.redstate.com/uploads/2016/02/donald-trump-is-still-soaring-in-iowa-but-there-are-now-some-clear-warning-signs.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+}
+#foto8{
+	background-image:url("https://media.giphy.com/media/Vzku9jyuef09G/giphy.gif");
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+}
+#foto9{
+	background-image:url("http://screenrant.com/wp-content/uploads/Chris-Hemsworth-Thor-Art-by-PC-Designs.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+}
+.movies .col4{
+	background-color: rgb(171, 241, 165);
+	flex: 1 20% ; /* 2%*3 = 6%  =>  94/4 = 23.5 */
+	color: aliceblue;
+}
+
+.movies .col3{
+	background-color: rgb(241, 165, 165);
+	flex: 1 30%; /* 2%*2 = 4% => 96/3 =>   */
+	color: aliceblue;
+}
