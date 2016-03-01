@@ -1,3 +1,15 @@
+
+<?php
+session_start();
+if( $_SESSION['loggedin'] == "yes" ) {
+	//WELCOME
+} else {
+	header('Location: index.php');
+
+}
+
+
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -7,31 +19,32 @@
 	<link rel="stylesheet" href="css/twitter.css">
 	<style>
 
-	
+
 	</style>
-	
+
 </head>
 <body>
-	<nav>
-		<a href="twitter_logout.php"Logout>Logout</a>
+
+	<nav id="hiddennav">
+		<a href="logout.php"Logout>Logout</a>
 	</nav>
-	
-	<div id="container">	
+
+	<div id="container">
 	<section id="newpost">
 		<form action="" method="post">
-			<label for="post">What's on your mind?</label>	
-			<textarea name="post" id="post" cols="30" rows="2"></textarea>		
-			<input type="submit" name="btnCreatePost" value="Send" />
-			
+			<label for="post">Welcome to IMD-talks <br> Find pout what other IMD'ers are building around you.</label>
+
+
+
 		</form>
 	</section>
-	
-	<section id="tweets">
-		<h2>Your posts</h2>
-		
-	</section>
-	
-	</div>	
-	
+
+
+
+
+
+
+	</div>
+
 </body>
 </html>
