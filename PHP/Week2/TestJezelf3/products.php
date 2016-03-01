@@ -1,15 +1,15 @@
 <?php
 
 include_once("include_products.php");
-foreach($productsArray as $products => $value){
 
-    echo "<h1>"; echo $value['beschrijving'] ; echo $value['prijs']; echo "</h1>";
-    echo '<img src="' . $value['foto'] . '" width="200" height="194">';
-    echo '<a href="' . $value['info']; echo'">Meer info'; echo "</a>";
-    echo "<hr>"; echo "</hr>";
+?>
 
-}
-foreach($productsArray as $products => $value) {
+<?php foreach($productsArray as $value => $product): ?>
+    <h1><?php echo $product['beschrijving'] . " " . $product['prijs'] ?></h1>
+    <img src="<?php echo $product['foto'] ?>" alt="">
+    <a href="/PcLink/Oefeningen/Week2/TestJezelf3/detail.php?product=<?php echo $value ?>"> Meer info</a>
+    <?php endforeach; ?>
+<?php foreach($productsArray as $products => $value) {
 
     echo "<li>";
     // echo "<p>";

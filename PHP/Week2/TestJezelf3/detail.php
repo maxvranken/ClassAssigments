@@ -17,10 +17,11 @@ session_start();
 </head>
 <body>
 
-<form action="" method="post">
+<form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="GET">
     <h1><?php echo $productsArray[$_GET['product']]['beschrijving']?></h1>
     <h2><?php echo $productsArray[$_GET['product']]['prijs']?></h2>
     <img src="<?php echo $productsArray[$_GET['product']]['foto']; ?>"/>
+    <input hidden="hidden" type="text" name="product" value="<?php echo $_GET['product']; ?>">
     <input hidden="hidden" type="text" name="productkey" value="<?php echo $_GET['product']; ?>">
     <button type="submit" value="" >Buy now </button>
 
@@ -30,7 +31,7 @@ session_start();
 
 </form>
 
-
+<?php include_once('cart.inc.php'); ?>
 
 </body>
 </html>
