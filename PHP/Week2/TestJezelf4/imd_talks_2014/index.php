@@ -1,3 +1,32 @@
+<?php
+function canLogin( $p_username, $p_password, $p_fullname)
+{
+	if ( !empty($p_username && $p_password && $p_fullname)) {
+		return true;
+	} else {
+		return false;
+	}
+};
+
+if ( !empty( $_POST ) ) {
+	$username = $_POST['email'];
+	$password = $_POST['password'];
+	$fullname = $_POST['name'];
+
+	if ( canLogin($username, $password, $fullname)  ) {
+		session_start();
+		$_SESSION['loggedin'] = "yes";
+
+		header('Location: createpost.php');
+	}
+}
+?>
+
+
+
+
+
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -8,18 +37,16 @@
 	
 </head>
 <body>
+<?php if(isset($_SESSION['loggedin'])): ?>
 	<nav>
 
-
-		<?php if(isset($_SESSION['loggedin'])): ?>
 			<a href="logout.php">Logout</a>
-		<?php else: ?>
-			<a href="index.php">Login</a>
-		<?php endif; ?>
-
 
 
 	</nav>
+<?php else: ?>
+
+<?php endif; ?>
 
 	<header>
 		<h1>Welcome to IMD-Talks</h1>
@@ -27,17 +54,7 @@
 	</header>
 	
 	<div id="rightside">	
-	<section id="login">
-		<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-		<input type="text" name="username" placeholder="Email" />
-		<input type="password" name="password" placeholder="Password" />
-		<input type="checkbox" name="rememberme" value="yes" id="rememberme">
-		<label for="rememberme">Remember me</label>
 
-		<input type="submit" name="btnLogin" value="Sign in" />
-		</form>
-		
-	</section>	
 	
 	<section id="signup">
 	
