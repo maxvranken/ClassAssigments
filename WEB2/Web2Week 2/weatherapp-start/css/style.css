@@ -1,0 +1,53 @@
+ body{
+            
+            color: white;
+            font-family: Lato;
+	 		background-color: gray;
+        }
+        
+        .weather{
+            background-image: url("../img/heavy-snow.jpg");
+            width: 800px;
+            height: 600px;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            width: 60%;
+            margin: 0 auto;
+           
+            
+        }
+
+
+
+.location{
+    margin-top: 50px;
+	
+	
+}
+
+
+
+
+.day{
+    margin-top:20px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 40px;
+	
+}
+
+.temp{
+    margin-top: 20px;
+	
+   
+}
+
+#weather-icon{
+   
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+}
