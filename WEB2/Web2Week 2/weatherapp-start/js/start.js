@@ -32,6 +32,7 @@
             App.getPositionName();
             App.getTemp();
             App.getDay();
+            App.getForecast();
         },
         getWeather: function () {
             //get the current weather for my location
@@ -47,25 +48,38 @@
                     
                 var skycons = new Skycons({"color": "white"});
                    
-                    switch(data.currently.summary){
-                        case "Fairly cloudy":
-                            skycons.set("weather-icon", Skycons.PARTLY_CLOUDY_DAY);
-                            break;
-                            case "Clear":
-                            skycons.set("weather-icon", Skycons.CLEAR_DAY);
-                            break;
-                            case "Mostly cloudy":
-                            skycons.set("weather-icon", Skycons.CLOUDY);
-                            break;
-							case "Drizzle":
-                            skycons.set("weather-icon", Skycons.RAIN);
-                            break;
-                            case "Default":
-                            skycons.set("weather-icon", Skycons.CLEAR_NIGHT);
-                            break;
-                            
-                            
-                    }  
+                    switch (data.currently.icon) {
+                            case "clear-day":
+                                skycons.set("weather-icon", Skycons.CLEAR_DAY);
+                                break;
+                            case "clear-night":
+                                skycons.set("weather-icon", Skycons.CLEAR_NIGHT);
+                                break;
+                            case "rain":
+                                skycons.set("weather-icon", Skycons.RAIN);
+                                break;
+                            case "snow":
+                                skycons.set("weather-icon", Skycons.SNOW);
+                                break;
+                            case "sleet":
+                                skycons.set("weather-icon", Skycons.SLEET);
+                                break;
+                            case "wind":
+                                skycons.set("weather-icon", Skycons.WIND);
+                                break;
+                            case "fog":
+                                skycons.set("weather-icon", Skycons.FOG);
+                                break;
+                            case "cloudy":
+                                skycons.set("weather-icon", Skycons.CLOUDY);
+                                break;
+                            case "partly-cloudy-day":
+                                skycons.set("weather-icon", Skycons.PARTLY_CLOUDY_DAY);
+                                break;
+                            case "partly-cloudy-night":
+                                skycons.set("weather-icon", Skycons.PARTLY_CLOUDY_NIGHT);
+                                break;
+                        }  
                     skycons.play();
                 }
             });
@@ -96,6 +110,20 @@
                 success: function (data) {
                     console.log(data);
                     $(".temp").text((((data.currently.apparentTemperature)-32)*5/9).toFixed(0)+ " °C") ;
+        }
+            });
+        },
+        
+         getForecast: function(){
+            var url = "https://api.forecast.io/forecast/" + App.APIKEY + "/" + App.lat + "," + App.lng;
+            
+            //JSONP
+            window.jQuery.ajax({
+                url: url,
+                dataType: "jsonp",
+                success: function (data) {
+                    console.log(data);
+                    $(".sunset").text(data.daily.summary) ;
         }
             });
         },
